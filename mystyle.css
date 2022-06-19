@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --dark-blue: hsl(249, 10%, 26%);
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  background: var(--red) url(images/bg-intro-desktop.png) no-repeat;
+  font-size: 16px;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.text-info {
+  color: #fff;
+  width: 35%;
+}
+
+.trial {
+  background-color: var(--blue);
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+}
+.trial p {
+  text-align: center;
+}
+.wrapper {
+  margin-top: 15px;
+  position: relative;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 34px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+  border-radius: 5px;
+}
+.wrapper form .input-box {
+  height: 60px;
+  margin: 18px 0;
+}
+form .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  border: 1.5px solid;
+  border-radius: 6px;
+  transform: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid {
+  border-color: var(--blue);
+}
+.input-box.button input {
+  background: var(--green);
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+.input-box.button input:hover {
+  background: #b4c2e7;
+  opacity: 1.8;
+}
+form .text h5 {
+  color: var(--grayish-blue);
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+form .text h5 a {
+  color: red;
+  text-decoration: none;
+}
+form .text h5 a:hover {
+  text-decoration: underline;
+}
+/* Mobile 375px */
+
+@media (max-width: 375px) {
+  body {
+    padding: 20px;
+    background: var(--red) url("images/bg-intro-mobile.png") no-repeat;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .text-info {
+    text-align: center;
+    padding-right: 0px;
+    margin: 3rem 0;
+    width: 100%;
+  }
+}
